@@ -1,11 +1,5 @@
 //user interface goes here
 
-
-
-
-
-
-
 //business logic goes here
 //pizza constructor
 function Pizza(size, toppings, price) {
@@ -15,24 +9,24 @@ function Pizza(size, toppings, price) {
 }
 
 //this will add toppings to the pizza
-Pizza.prototype.addToppings = function(inputTopping1, inputTopping2, inputTopping3, inputTopping4) {
+Pizza.prototype.addToppings = function (inputTopping1, inputTopping2, inputTopping3,
+  inputTopping4) {
   if (inputTopping1 !== '') {
     this.toppings.push(inputTopping1 + ',' + '');
   }
+
   if (inputTopping2 !== '') {
     this.toppings.push(inputTopping2 + ',' + '');
   }
+
   if (inputTopping3 !== '') {
     this.toppings.push(inputTopping3 + ',' + '');
   }
-  if (inputTopping4 !== '') {
-    this.toppings.push(inputTopping4 + ',' + '');
-  }
-}
+};
 
 //this will add price to the pizza
 Pizza.prototype.addPrice = function () {
-  if (this.size === "small") {
+  if (this.size === 'small') {
     this.price = 10;
     this.price += this.toppings.length;
   }else if (this.size === 'medium') {
@@ -54,6 +48,7 @@ Pizza.prototype.addPrice = function () {
 
   return this.price;
 };
+
 //this will construct pizza order and show size and price
 function YourPizza(size, toppings, price) {
   var toppingsString = toppings;

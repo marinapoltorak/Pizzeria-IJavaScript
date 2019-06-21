@@ -10,8 +10,62 @@
     <title>Pizzeria-IJavaScript</title>
   </head>
   <body>
-    <h1>Welcome message</h1>
-    <h2>Description of order process</h2>
-    <h3>form goes here</h3>
+    <div class="container">
+      <div class="jumbotron jumbotron-billboard">
+      <h1>Pizzaria Intermidiate-O JavaScript-O</h1>
+      </div>
+      <form id="new-order" class="form-group">
+          <h4>Pick a size:</h4>
+          <label for="new-pizza-size"></label>
+          <select class="new-pizza-size" id="new-pizza-size">
+            <option value="" selected> Size:</option>
+            <option value="small">small</option>
+            <option value="medium">medium</option>
+            <option value="large">large</option>
+            <option value="huge">huuuge!</option>
+          </select>
+        <div id="tops-form" class="form-group">
+          <h4>Pick a protein:</h4>
+          <select class="new-topping1" name="new-topping1">
+            <option value="" selected> Protein:</option>
+            <option value="pepperoni">Pepperoni</option>
+            <option value="bacon">Bacon</option>
+            <option value="seitan">Seitan</option>
+            <option value="chicken">Chicken</option>
+          </select>
+          <h4>Pick some veg:</h4>
+          <select class="new-top2" name="new-top2">
+            <option value="" selected> Veggies:</option>
+            <option value="garlic">Garlic</option>
+            <option value="tomatoes">Tomatoes</option>
+            <option value="pineapple">Pineapple (fruit, but it's ok)</option>
+            <option value="red-peppers">Red Peppers</option>
+            <option value="onions">Onions</option>
+            <option value="arugula">Arugula</option>
+          </select>
+          <h4>Add more cheese:</h4>
+          <select class="new-top2" name="new-top2">
+            <option value="" selected> Cheeze:</option>
+            <option value="mozzarella">Mozzarella</option>
+            <option value="pecorino">Pecorino Romano</option>
+          </select>
+          <h4>Add mushrooms:</h4>
+          <select class="new-top3" name="new-top3">
+            <option value="" selected>Mushrooms</option>
+            <option value="button">Button</option>
+            <option value="porcini">Porcini</option>
+            <option value="chanterelles">Chanterelles</option>
+          </select>
+          <br><br><br>
+          <button type="submit" class = "btn-danger" name="btn ">JavaScript-O! Make me a Pizza!</button>
+      </form>
+      <br><br>
+      <div class="jumbotron" id="your-pizza">
+        <h3>There is one <span id="show-size"></span> pizza pie with <span id="show-toppings"></span></h3>
+        <h4>Please pay $<span id="show-price"></span></h4>
+        <h2>Questo pizza è buono da mangiare!</h2>
+
+      </div>
+    </div>
   </body>
 </html>
