@@ -3,8 +3,17 @@
 }
 
 #new-order {
-  color: #D8A84A;
+  color: #FCF0A7;
   background-color: #968828;
+  text-align: center;
+  padding: 30px;
+}
+
+.button {
+  border-radius: 50%;
+  padding: 30px;
+  background-color: #8F6D1B;
+  color: #FCF0A7;
 }
 
 body {
