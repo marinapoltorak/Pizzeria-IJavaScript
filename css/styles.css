@@ -7,27 +7,55 @@
   background-color: #968828;
   text-align: center;
   padding: 30px;
-}
+  background-image: url("../img/fireRound.jpeg");
+  background-position: center;
+  background-size: cover;
+  text-shadow:
+		-3px -3px 0 black,
+		3px -3px 0 black,
+		-3px 3px 0 black,
+		3px 3px 0 black;
+  }
 
 .button {
   border-radius: 50%;
   padding: 30px;
   background-color: #8F6D1B;
   color: #FCF0A7;
-}
+  border-style: solid;
+  border-color: black;
+  }
+
+
 
 body {
   background-color: #331D02;
-  color: #D8A84A
+  color: #D8A84A;
 }
 
 .jumbotron {
-  /* background-image: url("../img/pieMachine.jpg"); */
-  /* background-repeat: no-repeat;
+  background-image: url("../img/pizza.jpeg");
+  background-repeat: no-repeat;
   background-position: center;
-  background-size: cover; */
+  background-size: cover;
   background-color: #A33704;
   text-align: center;
+  text-shadow:
+		-1px -1px 0 blue,
+		1px -1px 0 blue,
+		-1px 1px 0 blue,
+		1px 1px 0 blue;
+  }
+
+#header {
+  background-image: url("../img/rome.jpeg");
+  background-position: center;
+  background-size: cover;
+  text-shadow:
+		-3px -3px 0 black,
+		3px -3px 0 black,
+		-3px 3px 0 black,
+		3px 3px 0 black;
 }
 
 #your-pizza {
