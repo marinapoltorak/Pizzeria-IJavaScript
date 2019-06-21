@@ -1,6 +1,8 @@
 # Pizzaria Intermidiate-O JavaScript-)
 
-#### Order a pizza with size and choices of toppings, and we will give you it's price
+#### Order a pizza with size and choices of toppings, and we will give you it's price.
+
+https://marinapoltorak.github.io/Pizzeria-IJavaScript/
 
 | Behavior | Input | Output |
 | ------------- |:-------------:| -----:|
