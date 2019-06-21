@@ -67,3 +67,7 @@ $(document).ready(function () {
       console.log(myPizza);
     });
   });
+
+function refreshPage() {
+  window.location.reload();
+}

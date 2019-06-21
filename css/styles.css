@@ -67,3 +67,11 @@ body {
   padding: 30px;
   background-color: #8F6D1B;
 }
+
+#refresh {
+  border-radius: 50%;
+  padding: 30px;
+  background-color: #8F6D1B;
+  color: #FCF0A7;
+  border-style: solid;
+  border-color: black;
