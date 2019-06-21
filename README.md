@@ -2,6 +2,16 @@
 
 #### _{Brief description of application}, {Date of current version}_
 
+| Behavior | Input | Output |
+| ------------- |:-------------:| -----:|
+| program accepts size of pizza from input and determines price | large | $20 |
+| program accepts toppings and determines price | pepperoni, anchovies, garlic | $3 |
+| program adds cost of size and tops and returns total cost | large, pepperoni, anchovies, garlic | $23 |
+| program displays the order | large, pepperoni, anchovies, garlic | You ordered a large pizza with pepperoni, anchovies and garlic. Your price is $23 |
+| | | |
+| | | |
+| | | | 
+
 #### By _**{List of contributors}**_
 
 ## Description
