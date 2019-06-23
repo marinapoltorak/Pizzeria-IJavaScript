@@ -1,28 +1,19 @@
 //business logic goes here
 //pizza constructor
-function Pizza(size, toppings, price) {
+function Pizza(size) {
+
   this.size = size,
   this.toppings = [],
   this.price = 0;
 }
 
 //this will add toppings to the pizza
-Pizza.prototype.addTopping = function (inputtedTopping1, inputtedTopping2, inputtedTopping3) {
-  if (inputtedTopping1 !== '') {
-    this.toppings.push(inputtedTopping1 + ',' + ' ');
-  }
-
-  if (inputtedTopping2 !== '') {
-    this.toppings.push(inputtedTopping2 + ',' + ' ');
-  }
-
-  if (inputtedTopping3 !== '') {
-    this.toppings.push(inputtedTopping3 + ',' + ' ');
-  }
+Pizza.prototype.addToppings = function (toppings) {
+  this.toppings = toppings;
 };
 
 //this will add price to the pizza
-Pizza.prototype.addPrice = function () {
+Pizza.prototype.calculatePrice = function () {
   if (this.size === 'small') {
     this.price = 6;
     this.price += (this.toppings.length);
@@ -39,15 +30,15 @@ Pizza.prototype.addPrice = function () {
 };
 
 //user interface goes here
-function yourPizza(size, toppings, price) {
-  var toppingsString = toppings;
+function showPizza(pizza) {
+  var toppingsString = String(pizza.toppings.join(', '));
   $('form#new-order').hide();
   $('#your-pizza').show();
-  $('#show-size').append(size);
-  $('#show-price').append(price);
-  if (toppings.length > 0) {
+  $('#show-size').append(pizza.size);
+  $('#show-price').append(pizza.price);
+  if (pizza.toppings.length > 0) {
     $('#show-toppings').show();
-    $('#show-toppings').append(String(toppingsString.join('').slice(0, -2)));
+    $('#show-toppings').append(toppingsString);
   }
 }
 
@@ -58,12 +49,12 @@ $(document).ready(function () {
       var inputtedTopping1 = $('select.new-topping1').val();
       var inputtedTopping2 = $('select.new-topping2').val();
       var inputtedTopping3 = $('select.new-topping3').val();
-      var myPizza = new Pizza(inputtedSize, inputtedTopping1, inputtedTopping2,
-      inputtedTopping3, 0);
-      myPizza.addTopping(inputtedTopping1, inputtedTopping2, inputtedTopping3);
-      myPizza.addPrice();
-      yourPizza(myPizza.size, myPizza.toppings, myPizza.price);
-      return myPizza;
+      var myPizza = new Pizza(inputtedSize);
+
+      myPizza.addToppings([inputtedTopping1, inputtedTopping2, inputtedTopping3]);
+      myPizza.calculatePrice();
+      showPizza(myPizza);
+
       console.log(myPizza);
     });
   });
